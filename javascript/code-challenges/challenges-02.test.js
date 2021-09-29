@@ -30,10 +30,13 @@ const addOne = (arr) => {
   //   tempArr.push(value+1);
   // });
   // return tempArr;
-  let tempArr = arr.map((value) => {
+  // let tempArr = arr.map((value) => {
+  //   return value = value + 1;
+  // });
+  // return tempArr;
+  return arr.map((value) => {
     return value = value + 1;
   });
-  return tempArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,10 +47,13 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-  let tempArr = arr.map((value) => {
+  // let tempArr = arr.map((value) => {
+  //   return value = value + '?';
+  // });
+  // return tempArr;
+  return arr.map((value) => {
     return value = value + '?';
   });
-  return tempArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,7 +67,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  //Solution code here...
   let tempArr = [];
   arr.forEach( (value, idx) => {
     tempArr[idx] = Math.pow(2, value); 
