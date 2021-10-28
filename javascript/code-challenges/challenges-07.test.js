@@ -26,16 +26,22 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-}
+  return starWarsArr.sort((value1, value2) => {
+    return value2.height - value1.height;
+  });
+};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
+Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
   // Solution code here...
+  arr.splice(idx, 3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +52,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,6 +70,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
+  for (let i = 0; i < str.length + 1; i++) {
+    result.push(str.slice(i));
+  }
   // Solution code here...
   return result;
 };
@@ -77,6 +87,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
@@ -124,6 +135,10 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(element => {
+    let snippet = element.slice(element.indexOf(' ')+1);
+    result.push(snippet.slice(snippet.indexOf(' ')+1));
+  });
   return result;
 };
 
