@@ -24,11 +24,14 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
-  return arr.map((value) => {
-    let splitStr = value.name.split('');
-    let reverseStr = splitStr.reverse();
-    return reverseStr.join('');
-  });
+  // return arr.map((value) => {
+  //   let splitStr = value.name.split('');
+  //   let reverseStr = splitStr.reverse();
+  //   return reverseStr.join('');
+
+  // can also chain prototypes:
+  return arr.map((value) => value.name.split('').reverse().join(''));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
