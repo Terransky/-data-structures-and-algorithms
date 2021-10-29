@@ -122,6 +122,7 @@ const isCapitalized = (str) => {
   // Solution code here...
   // return str.match(/[A-Z][a-z]*/g);
   // return str.match(/^[A-Z]*$/);
+  // return [...str.matchAll(/\b[A-Z]\w*\b/g)].map(items => items[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
