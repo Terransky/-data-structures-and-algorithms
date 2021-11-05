@@ -49,7 +49,7 @@ If it does, return true. If not, return false.
 const hasNumber = (string) => {
   // Solution code here...
   // return /[a-zA-Z]+[0-9]+/.test(string);
-  return /^\D+\d+/.test(string);
+  return /\D+\d+/.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,7 +96,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
-  return /^((\(\d\d\d\))|(\d\d\d))[ -]?\d\d\d[ -]?\d\d\d\d$/.test(phoneNumber);
+  //return /^((\(\d\d\d\))|(\d\d\d))[ -]?\d\d\d[- ]?\d\d\d\d$/.test(phoneNumber);
+  return /^((\(\d{3}\))|(\d{3}))[ -]?\d{3}[- ]?\d{4}$/.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
