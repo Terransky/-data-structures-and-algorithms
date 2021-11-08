@@ -8,8 +8,14 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
+  let longest = '';
+  arr.forEach(str => {
+    if(str.length > longest.length) {
+      longest = str;
+    }
+  });
+  return arr.indexOf(longest);
 };
-  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -20,6 +26,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  // let newArr = arr.map(item => item.split(''));
+  return arr.map(item => item.split('')).map(element => element[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +40,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  return arr.filter(element => element.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +53,8 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  let regex = /\s|-|\(|\)/g;
+  return arr.map(string => string.replace(regex, ''));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +67,7 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  return str.split('').filter((element, index) => index % 2 === 1).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +78,13 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let verify = true;
+  arr.forEach ((element) => {
+    if (!element.includes(':)')) {
+      verify = false;
+    }
+  });
+  return verify;
 };
 
 /* ------------------------------------------------------------------------------------------------
