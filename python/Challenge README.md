@@ -2,7 +2,7 @@
 Define a function that accepts a list as input and outputs a reversed list
 
 ## Whiteboard Process
-
+![Whiteboard](https://github.com/Terransky/data-structures-and-algorithms/blob/main/python/array-reverse.png)
 
 ## Approach & Efficiency
 I created a second list to store the values of the input list and instantiated it to be the same length as the input to avoid an out of range error.
